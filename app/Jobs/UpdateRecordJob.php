@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 
 class UpdateRecordJob extends Job
 {
-    const BASE_URL = 'https://app.dnsmanager.io/api/v1';
+    const BASE_URL = 'https://app.dnsmanager.io/api/v1/';
 
     /**
      * @var DnsUpdate
@@ -45,6 +45,6 @@ class UpdateRecordJob extends Job
 
     private function buildUrl(): string
     {
-        return '/user/domain/' . $this->update->getDomainId() . '/record/' . $this->update->getRecordId();
+        return 'user/domain/' . $this->update->getDomainId() . '/record/' . $this->update->getRecordId();
     }
 }
