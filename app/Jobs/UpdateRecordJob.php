@@ -45,6 +45,6 @@ class UpdateRecordJob extends Job
 
     private function buildUrl(): string
     {
-        return '/user/domains/' . $this->update->getDomainId() . '/record/' . $this->update->getRecordId();
+        return '/user/domain/' . $this->update->getDomainId() . '/record/' . $this->update->getRecordId();
     }
 }
