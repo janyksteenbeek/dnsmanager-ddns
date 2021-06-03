@@ -33,7 +33,7 @@ class UpdateRecordJob extends Job
     {
         $client = new Client([
             'base_uri' => self::BASE_URL,
-             ['auth' => $this->update->apiKeyPair()]
+            'auth' => $this->update->apiKeyPair(),
         ]);
 
         $client->put($this->buildUrl(), [
