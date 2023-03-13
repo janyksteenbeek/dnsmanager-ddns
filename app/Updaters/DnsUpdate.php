@@ -5,9 +5,13 @@ namespace App\Updaters;
 class DnsUpdate
 {
     private $apiId;
+
     private $apiKey;
+
     private $domainId;
+
     private $recordId;
+
     private $dnsValue;
 
     public function __construct($apiId, $apiKey, $domainId, $recordId, $dnsValue)
@@ -48,5 +52,4 @@ class DnsUpdate
     {
         return [$this->getApiId(), $this->getApiKey()];
     }
-
 }

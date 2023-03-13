@@ -38,13 +38,13 @@ class UpdateRecordJob extends Job
 
         $client->put($this->buildUrl(), [
             'json' => [
-                'content' => $this->update->getDnsValue()
-            ]
+                'content' => $this->update->getDnsValue(),
+            ],
         ]);
     }
 
     private function buildUrl(): string
     {
-        return 'user/domain/' . $this->update->getDomainId() . '/record/' . $this->update->getRecordId();
+        return 'user/domain/'.$this->update->getDomainId().'/record/'.$this->update->getRecordId();
     }
 }

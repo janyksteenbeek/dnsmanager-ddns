@@ -1,8 +1,7 @@
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
-
-$router->get('/', function () use ($router) {
+$router->get('/', function () {
     return redirect(env('HOME_URL', 'https://github.com/janyksteenbeek/dnsmanager-ddns'));
 });
 

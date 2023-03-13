@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Updaters\Dyn;
 
 use App\Updaters\DnsUpdate;
@@ -26,7 +25,7 @@ class DynNicUpdateUpdater extends Updater
 
     public function build(): DnsUpdate
     {
-        $hostname = explode('.', $this->request->get('hostname'));;
+        $hostname = explode('.', $this->request->get('hostname'));
 
         return new DnsUpdate(
             $this->request->getUser(),
